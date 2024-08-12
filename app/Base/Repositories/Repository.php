@@ -25,7 +25,8 @@ class Repository implements RepositoryInterface
             $this->model->{$field} = $val;
         }
         $this->model->save();
-        return $this->model;    }
+        return $this->model;
+    }
 
     public function update(array $data): ?Model
     {
@@ -37,7 +38,8 @@ class Repository implements RepositoryInterface
             $this->model->{$field} = $val;
         }
         $this->model->save();
-        return $this->model;    }
+        return $this->model;
+    }
 
     public function delete($id): bool
     {

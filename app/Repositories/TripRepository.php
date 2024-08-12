@@ -16,7 +16,7 @@ class TripRepository extends Repository
     {
         return $this->model::where('departure_city_id', $fromCityId)
             ->where('arrival_city_id', $toCityId)
-            ->with(['bus', 'seats'])
+            ->with(['bus'])
             ->get();
     }
 
