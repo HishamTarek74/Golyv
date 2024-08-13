@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Exceptions\SeatNotAvailableException;
 use App\Repositories\BookingRepository;
 use App\Repositories\TripRepository;
 use Illuminate\Validation\ValidationException;
@@ -29,9 +30,8 @@ class BookingService
         $availableSeats = $this->tripService->getAvailableSeats($fromCityId, $toCityId);
 
         if (!in_array($seatId, $availableSeats[$tripId])) {
-            throw ValidationException::withMessages([
-                'seat_id' => 'The selected seat is not available for booking'
-            ]);
+            throw new SeatNotAvailableException("The selected seat is not available for booking.");
+
         }
 
         return $this->bookingRepository->create([
