@@ -9,6 +9,9 @@ class Bus extends Model
 {
     use HasFactory;
 
+
+    const SEATS_PER_BUS = 12;
+
     protected $fillable = ['name'];
 
     public function trips()

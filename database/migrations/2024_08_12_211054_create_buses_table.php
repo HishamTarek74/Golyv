@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Bus;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -14,7 +15,7 @@ return new class extends Migration
         Schema::create('buses', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('total_seats')->default(12);
+            $table->integer('total_seats')->default(Bus::SEATS_PER_BUS);
             $table->timestamps();
         });
     }
