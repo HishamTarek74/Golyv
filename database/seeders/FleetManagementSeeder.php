@@ -14,6 +14,13 @@ class FleetManagementSeeder extends Seeder
 {
     public function run()
     {
+        //create test user
+
+        User::create([
+            'name' => 'Hisham',
+            'email' => 'hesham@gmail.com',
+            'password' => 'password'
+        ]);
         // Create specific cities
         $cities = [
             ['name' => 'Cairo'],
