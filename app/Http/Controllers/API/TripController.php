@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Requests\AvailableSeatsRequest;
 use App\Http\Resources\AvailableSeatsResource;
+use App\Http\Resources\SeatResource;
 use App\Services\TripService;
 
 class TripController

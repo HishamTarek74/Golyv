@@ -15,8 +15,9 @@ class AvailableSeatsResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'trip_id' => $this->resource->first()->trip_id,
-            'available_seats' => $this->resource,
+            'id' => $this['id'],
+            'seat_number' => $this['seat_number'],
+            'trip_id' => $this['trip_id'],
         ];
     }
 }
