@@ -76,7 +76,9 @@ Ensure you have the following installed:
 **Endpoint:** POST /api/bookings
 
 **Description:** user can book a seat based in from & to city if it available.
-- Bearer Auth Token Required -> you can get from /api/login
+- Bearer Auth Token Required -> you can get from /api/login 
+- email : hesham@gmail.com
+- password : password
 
 **Request Body:**
 
